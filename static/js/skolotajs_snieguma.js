@@ -5,14 +5,14 @@ async function sutitDatus(){
     let two = document.getElementById('snieguma_limenis_2')
     let three = document.getElementById('snieguma_limenis_3')
     let four = document.getElementById('snieguma_limenis_4')
-    let temats = document.getElementById("temati").value
+    let temats = document.getElementById('temati').value
 
     const atbilde = await fetch('/prasmes', {
         method: 'POST',
         headers: {
                 'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ "prasmes": criteria.value, "snieguma_limenis_1":one.value,"snieguma_limenis_2": two.value, "snieguma_limenis_3": three.value, "snieguma_limenis_4": four.value, "temati_id":temats})
+        body: JSON.stringify({ "prasmes": criteria.value, 'snieguma_limenis_1':one.value,'snieguma_limenis_2': two.value, 'snieguma_limenis_3': three.value, 'snieguma_limenis_4': four.value, "temati_id":temats})
     });
     criteria.value = ''
     one.value = ''
